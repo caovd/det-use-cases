@@ -1,0 +1,35 @@
+name: yolox-coreapi-stage-4-distributed
+environment:
+  # image: determinedai/environments:cuda-10.2-pytorch-1.7-tf-1.15-gpu-mpi-0.21.0
+  # image: determinedai/environments:cuda-11.3-pytorch-1.12-tf-2.11-gpu-mpi-0.22.1
+  # image: determinedai/environments:cuda-10.2-base-gpu-0.22.1
+  image: determinedai/environments:cuda-11.3-pytorch-1.10-tf-2.8-gpu-24586f0
+  environment_variables:
+    - YOLOX_DATADIR=./datasets/airbus
+hyperparameters:
+  flip_prob: 0.5
+  degree: 10
+  translate: 0.1
+  shear: 2
+  enable_mixup: True
+  ema: True
+  num_machines: 1
+  machine_rank: 0
+  dist_backend: "nccl"
+max_restarts: 0
+searcher:
+  name: single
+  max_length: 1
+  metric: AP50
+  smaller_is_better: False
+entrypoint: 
+  python3 -m determined.launch.torch_distributed --rdzv_endpoint=$CUSTOM_RDZV_ADDR --
+  python3 -m yolox.tools.train -f airbus_config.py -b 32 -o -c yolox_s.pth     # Remove -d <num of devices>  --fp16
+workspace: poc
+project: yolox_dev
+resources:
+  slots_per_trial: 2
+  resource_pool: compute-pool 
+
+
+

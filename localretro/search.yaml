@@ -1,0 +1,61 @@
+name: LocalRetro_search
+environment:
+  image: determinedai/environments:cuda-10.2-pytorch-1.7-tf-1.15-gpu-mpi-0.21.0
+hyperparameters:
+    global_batch_size: 16
+    learning_rate:
+        type: log
+        base: 10.0
+        maxval: -2
+        minval: -6
+    weight_decay: 
+        type: log       
+        base: 10.0
+        maxval: -4
+        minval: -8
+    schedule_step: 
+        type: int
+        maxval: 12
+        minval: 8
+    drop_out: 
+        type: double
+        maxval: 0.3
+        minval: 0.1
+    attention_layers: 
+        type: int
+        maxval: 3
+        minval: 1
+    num_step_message_passing: 
+        type: int
+        maxval: 8
+        minval: 4
+    attention_heads: 8
+    node_out_feats: 320
+    edge_hidden_feats: 64
+    patience: 5
+    max_clip: 20
+    dataset: 'USPTO_50K'
+    mode: 'train'
+searcher:
+    name: adaptive_asha
+    metric: val_loss 
+    max_trials: 8
+    mode: aggressive
+    max_length:
+        batches: 500           
+    smaller_is_better: true
+    max_concurrent_trials: 8
+min_validation_period:
+    batches: 10                   
+entrypoint: model_def:LocalRetroPytorch
+max_restarts: 0
+workspace: poc
+project: localretro
+resources:
+    resource_pool: compute-pool
+    slots_per_trial: 1
+profiling:
+  enabled: true
+  begin_on_batch: 0
+  end_after_batch: null
+

@@ -1,7 +1,7 @@
 ## LocalRetro model porting to Determined AI 
 The objectives is to train LocalRetro faster using Determined AI's distributed training and HP search features.  
 
-LocalRetro is the Transformer-based model for Retrosynthesis Prediction with LocalRetro developed by Prof. Yousung Jung's group at KAIST.
+LocalRetro is the DNN with attention for Retrosynthesis Prediction with LocalRetro developed by Prof. Yousung Jung's group at KAIST.
 
 ## Original repo 
 https://github.com/kaist-amsg/LocalRetro

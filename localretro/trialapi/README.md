@@ -1,3 +1,5 @@
+### Currently fixing flat val_loss issue
+
 ## LocalRetro model porting to Determined AI 
 The objectives is to train LocalRetro faster using Determined AI's distributed training and HP search features.  
 

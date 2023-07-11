@@ -1,0 +1,77 @@
+epoch 1/50, batch 2501/2501, loss 0.0547
+epoch 1/50, training loss: 0.1021
+epoch 1/50, validation loss: 0.0546
+epoch 1/50, Best loss: 0.0546
+epoch 2/50, batch 2501/2501, loss 0.0379
+epoch 2/50, training loss: 0.0515
+epoch 2/50, validation loss: 0.0469
+epoch 2/50, Best loss: 0.0469
+epoch 3/50, batch 2501/2501, loss 0.0356
+epoch 3/50, training loss: 0.0452
+epoch 3/50, validation loss: 0.0427
+epoch 3/50, Best loss: 0.0427
+epoch 4/50, batch 2501/2501, loss 0.0342
+epoch 4/50, training loss: 0.0416
+epoch 4/50, validation loss: 0.0395
+epoch 4/50, Best loss: 0.0395
+epoch 5/50, batch 2501/2501, loss 0.0250
+epoch 5/50, training loss: 0.0391
+epoch 5/50, validation loss: 0.0376
+epoch 5/50, Best loss: 0.0376
+epoch 6/50, batch 2501/2501, loss 0.0370
+epoch 6/50, training loss: 0.0370
+epoch 6/50, validation loss: 0.0363
+epoch 6/50, Best loss: 0.0363
+epoch 7/50, batch 2501/2501, loss 0.0227
+epoch 7/50, training loss: 0.0353
+epoch 7/50, validation loss: 0.0357
+epoch 7/50, Best loss: 0.0357
+epoch 8/50, batch 2501/2501, loss 0.0313
+epoch 8/50, training loss: 0.0338
+epoch 8/50, validation loss: 0.0353
+epoch 8/50, Best loss: 0.0353
+epoch 9/50, batch 2501/2501, loss 0.0244
+epoch 9/50, training loss: 0.0326
+epoch 9/50, validation loss: 0.0346
+epoch 9/50, Best loss: 0.0346
+epoch 10/50, batch 2501/2501, loss 0.0294
+epoch 10/50, training loss: 0.0313
+epoch 10/50, validation loss: 0.0344
+epoch 10/50, Best loss: 0.0344
+epoch 11/50, batch 2501/2501, loss 0.0472
+epoch 11/50, training loss: 0.0270
+epoch 11/50, validation loss: 0.0323
+epoch 11/50, Best loss: 0.0323
+epoch 12/50, batch 2501/2501, loss 0.0150
+epoch 12/50, training loss: 0.0258
+epoch 12/50, validation loss: 0.0323
+epoch 12/50, Best loss: 0.0323
+epoch 13/50, batch 2501/2501, loss 0.0120[[1;2B
+epoch 13/50, training loss: 0.0252
+epoch 13/50, validation loss: 0.0322
+epoch 13/50, Best loss: 0.0322
+epoch 14/50, batch 2501/2501, loss 0.0162
+epoch 14/50, training loss: 0.0246
+EarlyStopping counter: 1 out of 5
+epoch 14/50, validation loss: 0.0323
+epoch 14/50, Best loss: 0.0322
+epoch 15/50, batch 2501/2501, loss 0.0291
+epoch 15/50, training loss: 0.0241
+EarlyStopping counter: 2 out of 5
+epoch 15/50, validation loss: 0.0325
+epoch 15/50, Best loss: 0.0322
+epoch 16/50, batch 2501/2501, loss 0.0282
+epoch 16/50, training loss: 0.0237
+EarlyStopping counter: 3 out of 5
+epoch 16/50, validation loss: 0.0324
+epoch 16/50, Best loss: 0.0322
+epoch 17/50, batch 2501/2501, loss 0.0269
+epoch 17/50, training loss: 0.0232
+EarlyStopping counter: 4 out of 5
+epoch 17/50, validation loss: 0.0326
+epoch 17/50, Best loss: 0.0322
+epoch 18/50, batch 2501/2501, loss 0.0129
+epoch 18/50, training loss: 0.0228
+EarlyStopping counter: 5 out of 5
+epoch 18/50, validation loss: 0.0328
+epoch 18/50, Best loss: 0.0322

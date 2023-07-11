@@ -1,0 +1,2 @@
+environment:
+  image: determinedai/environments:cuda-10.2-pytorch-1.7-tf-1.15-gpu-mpi-0.21.0

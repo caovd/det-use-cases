@@ -1,0 +1,15 @@
+name: localretro-coreapi-stage-2-checkpoint
+entrypoint: >-
+  python scripts/Train.py -d USPTO_50K
+environment:
+  image: determinedai/environments:cuda-10.2-pytorch-1.7-tf-1.15-gpu-mpi-0.21.0
+max_restarts: 0
+searcher:
+  name: single
+  max_length: 1
+  metric: val_loss
+# To be removed or replaced by custom cluster information
+workspace: poc
+project: localretro_dev
+resources:
+    resource_pool: compute-pool 

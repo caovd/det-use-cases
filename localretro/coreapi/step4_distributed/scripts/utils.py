@@ -80,10 +80,10 @@ def load_dataloader(args, core_context, hparams):
             shuffle=False,
         )
 
-        # NEW: Shard data.
-        train_loader = DataLoader(dataset=train_set, sampler=train_sampler, batch_size=hparams["global_batch_size"], shuffle=True,
+        # NEW: Shard data. Remove shuffle as it's mutually exclusive with sampler
+        train_loader = DataLoader(dataset=train_set, sampler=train_sampler, batch_size=int(hparams["global_batch_size"]/core_context.distributed.size),
                                   collate_fn=collate_molgraphs, num_workers=args['num_workers'])
-        val_loader = DataLoader(dataset=val_set, sampler=val_sampler, batch_size=hparams["global_batch_size"],
+        val_loader = DataLoader(dataset=val_set, sampler=val_sampler, batch_size=int(hparams["global_batch_size"]/core_context.distributed.size),
                                 collate_fn=collate_molgraphs, num_workers=args['num_workers'])
         # Docs snippet end: shard data
 

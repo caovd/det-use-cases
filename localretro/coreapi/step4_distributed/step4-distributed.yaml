@@ -4,8 +4,10 @@ entrypoint: >-
   python3 scripts/Train.py -d USPTO_50K
 environment:
   image: determinedai/environments:cuda-10.2-pytorch-1.7-tf-1.15-gpu-mpi-0.21.0
+  environment_variables:
+    - NCCL_DEBUG="INFO"
 hyperparameters:
-    global_batch_size: 256
+    global_batch_size: 64
     learning_rate: 1.0e-4
     weight_decay: 1.0e-6
     schedule_step: 10
@@ -25,10 +27,10 @@ searcher:
   name: single
   metric: val_loss
   max_length:
-    epochs: 3
+    epochs: 2
 # To be removed or replaced by custom cluster information
 workspace: poc
 project: localretro_dev
 resources:
     resource_pool: compute-pool 
-    slots_per_trial: 16
+    slots_per_trial: 8
